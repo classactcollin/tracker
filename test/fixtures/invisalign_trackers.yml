@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  in: 2018-02-19 04:20:53
+  out: 2018-02-19 04:20:53
+  duration: 
+  daynumber: 
+  tracker_id: 
+
+two:
+  in: 2018-02-19 04:20:53
+  out: 2018-02-19 04:20:53
+  duration: 
+  daynumber: 
+  tracker_id: 

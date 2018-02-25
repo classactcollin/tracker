@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tracker.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tracker.user.name %>
+</p>
+
+<p>
+  <strong>Star Date:</strong>
+  <%= @tracker.start_date %>
+</p>
+
+<%= link_to 'Edit', edit_tracker_path(@tracker) %> |
+<%= link_to 'Back', trackers_path %>

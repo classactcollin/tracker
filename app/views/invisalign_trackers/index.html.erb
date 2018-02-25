@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Invisalign Trackers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>In</th>
+      <th>Out</th>
+      <th>Duration</th>
+      <th>Daynumber</th>
+      <th>Tracker</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invisalign_trackers.each do |invisalign_tracker| %>
+      <tr>
+        <td><%= invisalign_tracker.in %></td>
+        <td><%= invisalign_tracker.out %></td>
+        <td><%= invisalign_tracker.duration %></td>
+        <td><%= invisalign_tracker.daynumber %></td>
+        <td><%= invisalign_tracker.tracker %></td>
+        <td><%= link_to 'Show', invisalign_tracker %></td>
+        <td><%= link_to 'Edit', edit_invisalign_tracker_path(invisalign_tracker) %></td>
+        <td><%= link_to 'Destroy', invisalign_tracker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Invisalign tracker', new_invisalign_tracker_path %>

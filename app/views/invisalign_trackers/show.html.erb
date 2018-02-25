@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>In:</strong>
+  <%= @invisalign_tracker.in %>
+</p>
+
+<p>
+  <strong>Out:</strong>
+  <%= @invisalign_tracker.out %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @invisalign_tracker.duration %>
+</p>
+
+<p>
+  <strong>Daynumber:</strong>
+  <%= @invisalign_tracker.daynumber %>
+</p>
+
+<p>
+  <strong>Tracker:</strong>
+  <%= @invisalign_tracker.tracker %>
+</p>
+
+<%= link_to 'Edit', edit_invisalign_tracker_path(@invisalign_tracker) %> |
+<%= link_to 'Back', invisalign_trackers_path %>
