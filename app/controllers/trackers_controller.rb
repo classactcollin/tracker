@@ -40,12 +40,7 @@ class TrackersController < ApplicationController
   # PATCH/PUT /trackers/1
   # PATCH/PUT /trackers/1.json
   def update
-    #TODO Fix this. Only handle simple date format. Maybe store as string.
-      puts "Track Params"
-      date=params[:tracker][:start_date]
-      puts date
-      puts Time.zone.strptime(date, "%m/%d/%Y")
-      params[:tracker][:start_date]=Time.zone.strptime(date, "%m/%d/%Y")
+
     respond_to do |format|
       if @tracker.update(tracker_params)
         format.html { redirect_to @tracker, notice: 'Tracker was successfully updated.' }

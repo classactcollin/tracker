@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180224032505) do
+ActiveRecord::Schema.define(version: 20180226002006) do
 
   create_table "invisalign_trackers", force: :cascade do |t|
     t.datetime "in"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20180224032505) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "start_date"
+    t.string   "start_date"
   end
 
   add_index "trackers", ["user_id"], name: "index_trackers_on_user_id"

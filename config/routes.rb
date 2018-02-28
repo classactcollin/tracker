@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
 
     
-  get 'startOut', to: 'invisalign_trackers#startOut'
-  get 'startIn', to: 'invisalign_trackers#startIn'
+  get 'startout', to: 'invisalign_trackers#startOut'
+  get 'startin', to: 'invisalign_trackers#startIn'
 
 
   resources :invisalign_trackers 

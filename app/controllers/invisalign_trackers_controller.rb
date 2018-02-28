@@ -40,11 +40,17 @@ class InvisalignTrackersController < ApplicationController
   def startOut
     puts("Here")
     tracker_id = 1
-    
+    startDate=Tracker.find(tracker_id).start_date
+    startDateTZ=Time.zone.strptime(startDate, "%m/%d/%Y")
+    puts startDate
+    puts startDateTZ
+    tzNow =Time.zone.now
+    elapsedDays=((tzNow-startDateTZ) / 1.day).floor
+
     params = {
-      :out => Time.zone.now,
-      :daynumber => 1,
-      :tracker_id => 1
+      :out => tzNow,
+      :daynumber => elapsedDays,
+      :tracker_id => tracker_id
     }
     @invisalign_tracker = InvisalignTracker.new(params)
     
